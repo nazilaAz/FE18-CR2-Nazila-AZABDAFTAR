@@ -8,15 +8,35 @@ body {
   font-size: 16px;
 }
 
-nav a #imgNavbar {
+header nav a #imgNavbar {
   background-color: white;
   width: 1rem;
   height: 1.2rem;
   margin-top: 0.3rem;
 }
-nav svg {
+header nav svg {
   color: white;
 }
-nav div .notContainer {
+header nav div .notContainer {
   margin-top: -1rem;
+}
+header nav div .hero {
+  background-image: url("../images/WeeklyPlanner.jpg");
+  height: 400px;
+}
+header .customNavbar {
+  padding: 0;
+}
+header .heroContainer {
+  position: relative;
+}
+header .heroContainer .divWeeklyHero {
+  position: absolute;
+  top: 10rem;
+}
+header .heroContainer .divWeeklyHero h1 {
+  background-color: rgba(70, 69, 69, 0.3);
+  height: 5rem;
+  text-align: center;
+  line-height: 2;
 }/*# sourceMappingURL=style.css.map */
