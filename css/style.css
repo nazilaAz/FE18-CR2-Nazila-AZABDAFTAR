@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@
 
 body {
   font-size: 16px;
+  font-family: "Playfair Display", serif;
 }
 
 header nav a #imgNavbar {
@@ -39,4 +41,61 @@ header .heroContainer .divWeeklyHero h1 {
   height: 5rem;
   text-align: center;
   line-height: 2;
+}
+
+main .mainHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 1rem 2.5rem;
+}
+main .tasksGrid {
+  margin: 0 auto;
+}
+main .tasksGrid hr {
+  margin: 0.2rem 0;
+}
+main .tasksGrid .topCard {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem;
+  align-items: baseline;
+}
+main .tasksGrid .btnTopCard {
+  width: 4rem;
+  height: 1.5rem;
+  font-size: 0.6rem;
+}
+main .tasksGrid .priorityLevel {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding: 0 2px;
+}
+main .tasksGrid .deadtimeCard {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: flex-start;
+}
+main .tasksGrid .btnBottomCard {
+  float: right;
+  margin: 0.5rem;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 5rem;
+}
+footer img {
+  background-color: #f8f9fa;
+}
+footer .form {
+  display: flex;
+  justify-content: space-around;
+}
+footer .pCopyright {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
