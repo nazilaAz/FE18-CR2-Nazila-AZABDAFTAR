@@ -19,7 +19,7 @@ for (let taskListValue of taskList) {
     </div>
 </div>
 
-<img src="${taskListValue.image}" class="card-img-top" alt="${taskListValue.taskName}">
+<img src="${taskListValue.image}" class="card-img-top h-70" alt="${taskListValue.taskName}">
 <div class="card-body">
     <h5 class="card-title">${taskListValue.taskName}</h5>
     <p class="card-text">${taskListValue.description}</p>
@@ -54,25 +54,44 @@ for (let taskListValue of taskList) {
 }
 
 let taskPri = document.getElementsByClassName("taskPri");
+let btnsPrio = document.getElementsByClassName("btnsPrio");
+let sortArray = [];
+
 for (let i = 0; i < taskPri.length; i++) {
 
     taskPri[i].addEventListener("click", function() {
+
         taskList[i].importance = taskList[i].importance + 1;
 
         if (taskList[i].importance <= 5) {
             document.getElementsByClassName("taskPri")[i].innerHTML =
                 taskList[i].importance;
-        }
 
-        if (taskList[i].importance <= 1) {
-            document.getElementsByClassName("taskPri")[i].classList.add("btn-success");
-        } else if (taskList[i].importance <= 3) {
-            document.getElementsByClassName("taskPri")[i].classList.remove("btn-success");
-            document.getElementsByClassName("taskPri")[i].classList.add("btn-warning");
+            if (taskList[i].importance <= 1) {
+                document.getElementsByClassName("taskPri")[i].classList.add("btn-success");
 
-        } else {
-            document.getElementsByClassName("taskPri")[i].classList.remove("btn-warning");
-            document.getElementsByClassName("taskPri")[i].classList.add("btn-danger");
+                // sortArray.push(taskList[i].importance);
+                // console.log(sortArray);
+
+            } else if (taskList[i].importance <= 3) {
+                document.getElementsByClassName("taskPri")[i].classList.remove("btn-success");
+                document.getElementsByClassName("taskPri")[i].classList.add("btn-warning");
+
+                // sortArray.push(taskList[i].importance);
+                // console.log(sortArray);
+
+            } else {
+                document.getElementsByClassName("taskPri")[i].classList.remove("btn-warning");
+                document.getElementsByClassName("taskPri")[i].classList.add("btn-danger");
+
+                // sortArray.push(taskList[i].importance);
+                // console.log(sortArray);
+            }
+
         }
+        sortArray.push(parseInt(taskList[i].importance));
+        sortArray.sort();
+
     })
+
 }
