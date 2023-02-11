@@ -62,7 +62,6 @@ main {
         margin: 1rem 2.5rem;
     }
     .tasksGrid {
-        // background-color: aqua;
         margin: 0 auto;
         hr {
             margin: .2rem 0;
@@ -72,6 +71,7 @@ main {
             justify-content: space-between;
             margin: .2rem;
             align-items: baseline;
+            column-gap: 10px;
         }
         .btnTopCard {
             width: 4rem;

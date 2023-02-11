@@ -61,6 +61,8 @@ main .tasksGrid .topCard {
   justify-content: space-between;
   margin: 0.2rem;
   align-items: baseline;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 main .tasksGrid .btnTopCard {
   width: 4rem;
